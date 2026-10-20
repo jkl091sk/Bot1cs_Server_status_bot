@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: bot1cs-status
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: SERVER_IP
+        value: 91.211.118.97
+      - key: SERVER_PORT
+        value: "27027"
+      - key: A2S_TIMEOUT
+        value: "5.0"
